@@ -5,6 +5,7 @@ emp={
     name:'Praveen',
     salary:7674444.55
 }
+//emp.desc="James";
 var e1=new Object();
 e1.empId=1200;
 e1.empName='James';
@@ -63,6 +64,19 @@ Q6: Can We Overload / override functions in JS?
 //-----------------------------------
 
 
+let x=100;
+{
+    let x=200;
+    console.log("---> X is "+x);
+    
+}
+console.log("---> OUT X is "+x);
+
+
+
+
+var personName; // undefineed -->
+var emp=new Object();
 
 
 
