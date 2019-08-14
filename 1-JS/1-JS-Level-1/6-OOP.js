@@ -57,9 +57,9 @@ class Boss extends Employee {
     }
 }
 
-const boss1 = new Boss('Nag', 35, 1000.00)
+const boss1 = new Boss('Praveen', 35, 1000.00)
 
-const boss2 = new Boss('Nag')
+const boss2 = new Boss('Praveen')
 
 
 
