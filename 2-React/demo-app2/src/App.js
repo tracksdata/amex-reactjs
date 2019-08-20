@@ -1,15 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Navbar from './components/Navbar';
 import StoryBox from './components/StoryBox';
 
 function App() {
   return (
-    <div className="col col-5 col-md-5">
-    
-     <StoryBox/>
-   
+    <div className="container">
+      
+      <StoryBox msg="Welcome to my Application"/>
+
     </div>
   );
 }
