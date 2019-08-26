@@ -20,48 +20,44 @@ class StoryBox extends Component {
     // Display / renmder stories
     renderStories() {
         // let books=[...this.state.books];
-        let { stories } = this.state;
+        const { stories } = this.state;
         return stories.map((story, idx) => {
-            return (
-
-                <Story story={story} key={idx} onDeleteAction={story => this.f1(story)} onUpdateAction={story=>this.f2(story)} />
-
-            );
+            return  <Story  
+            key={idx} value={story}
+            onDeleteAction={e => this.f1(story)} 
+            onUpdateAction={id=>this.f2(id)}/>  
         });
-
     }
 
-    addNewStory(newStory) {
-
-        let { stories } = this.state;
-        stories = stories.concat(newStory);
-        this.setState({ stories });
+    addNewStory(newStory) {        
+            let nextId = Math.floor(Math.random() * 1000);
+            newStory.id = nextId;
+            let {stories}=this.state;
+            stories=stories.concat(newStory);
+            this.setState({ stories });
     }
 
 
     f1(story) {
-
         this.setState({
-            stories: this.state.stories.filter((x, i) => story.id !== x.id)
+            stories: this.state.stories.filter((x, idx) => story.id !== x.id)
         });
     }
-    f2(story) {
-       // console.log('--- Update function ' + story.author);
-        return story;
 
+    f2(id) {
+     
     }
 
     render() {
-        let oldStory={
-            id:'S001',
-            author:'Praveen',
-            body:'Story10'
-        }
+
+       
         return (
             <div className="card">
                 <div className="card-header bg-primary">Story Box</div>
                 <div className="card-body">
-                    <StoryForm onSumit={newStory => this.addNewStory(newStory)} story={oldStory} />
+                    <StoryForm 
+                    onSubmit={newStory=>this.addNewStory(newStory)} 
+                     />
                     <hr />
                     {this.renderStories()}
                 </div>

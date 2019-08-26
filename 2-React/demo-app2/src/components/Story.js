@@ -13,25 +13,26 @@ class Story extends Component {
 
     }
 
-    updateData() {
-        let { story } = this.props;
-        //console.log('Data: '+story);
-
-        let { onUpdateAction } = this.props;
+    updateData(e) {
+        e.preventDefault();
+       // let { story } = this.props;
+        let {value,onUpdateAction} =this.props;
+        const {id}=value;
         if (onUpdateAction) {
-            onUpdateAction(story);
+            onUpdateAction(id);
         }
 
     }
 
     render() {
-        let { story } = this.props;
+        let { value } = this.props;
+        let {author,body}=value;
         return (
             <div>
                 <div className="alert alert-info">
-                    <span className="badge badge-dark"> {story.author}</span>
+                    <span className="badge badge-dark"> {author}</span>
                     <hr />
-                    <p>{story.body}</p>
+                    <p>{body}</p>
                     <p>
                         <button className="btn btn-danger btn-sm btn-space" onClick={e => this.deleteData(e)}>Delete</button>
                         <button className="btn btn-primary btn-sm btn-space" onClick={e => this.updateData(e)}>Update</button>

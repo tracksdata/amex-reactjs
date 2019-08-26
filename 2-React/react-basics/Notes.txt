@@ -1,0 +1,13 @@
+
+
+
+
+
+    - What is component?
+    - props and state
+    - life-cycle methods
+    - inter component communication
+    - context
+    - Higher-Order-Componets  (Pattern)
+
+    
