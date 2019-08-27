@@ -36,20 +36,25 @@ class App extends Component {
         <hr />
         <h1>{title} - by <span className="badge badge-info">{trainer}</span></h1>
         <hr />
+        {
+          /*
         <button onClick={e => this.changeMessage('Good Morning')}>Good Morning</button>
         <button onClick={e => this.changeMessage('Good Afternoon')}>Good Afternoon</button>
         <button onClick={e => this.changeMessage('Good Evening')}>Good Evening</button>
         <button onClick={e => this.changeMessage('')}>Remove</button>
-
+          */
+        }
         <hr />
 
-        {message ? <Greeting message={message} /> : null}
+        {
 
-        <hr/>
+          //{message?<Greeting message = { message } /> : null}
 
-       <Greeting message={message} />
+        }
 
-       
+
+
+
         <hr />
 
       </div>
@@ -58,20 +63,9 @@ class App extends Component {
     );
   }
 
-  componentDidMount() {
-    console.log('App :: componentDidMount');
 
-    setTimeout(()=>{
-      let response='Hello, React ';
-      this.setState({message:response});
-    },6000);
-  }
-   //-----------------------------
 
-   componentDidUpdate(prevProps, prevState, snapshot){
-     console.log("App :: componentDidUpdate");
-     
-   }
+
 
 }
 

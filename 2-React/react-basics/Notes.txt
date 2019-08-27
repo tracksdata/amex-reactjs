@@ -8,6 +8,7 @@
     - life-cycle methods
     - inter component communication
     - context
+    - container components
     - Higher-Order-Componets  (Pattern)
 
     
