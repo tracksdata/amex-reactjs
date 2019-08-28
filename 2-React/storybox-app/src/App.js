@@ -5,7 +5,7 @@ import StoryBox from './components/StoryBox';
 
 function App() {
   return (
-    <div className="container">
+    <div className="container col-4 mt-4">
       <StoryBox/>
     </div>
   );

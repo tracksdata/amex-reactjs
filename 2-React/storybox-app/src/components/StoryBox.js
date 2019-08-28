@@ -10,7 +10,8 @@ class StoryBox extends Component {
         ],
         story: { id: 0, author: '', body: '' }
         ,
-        isEditing: false
+        isEditing: false,
+        btnLble:'Save Story'
     }
 
     renderStories() {
@@ -27,14 +28,9 @@ class StoryBox extends Component {
 
         const { id } = e;
         let { stories } = this.state;
-        stories.map((s, idx) => {
-            console.log(s.id + " and " + id);
-
-            console.log(s.author);
-
-        })
+    
         let story = stories.find(story => story.id === id)
-        this.setState({ story, isEditing: true });
+        this.setState({ story, isEditing: true,btnLble:'Update Story'});
 
     }
 
@@ -73,7 +69,7 @@ class StoryBox extends Component {
                 author: '',
                 body: ''
             }
-            this.setState({ story, isEditing: false })
+            this.setState({ story, isEditing: false,btnLble:'Save Story' })
         });
 
 
@@ -90,6 +86,7 @@ class StoryBox extends Component {
                             onChange={e => this.handleChange(e)}
                             onSubmit={e => { this.addNewStory() }}
                             value={story}
+                            btnLble={this.state.btnLble}
                         />
                         <hr />
                         {this.renderStories()}

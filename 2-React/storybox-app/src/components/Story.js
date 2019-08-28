@@ -20,8 +20,9 @@ class Story extends Component {
                     <span className="badge badge-dark">{author}</span>
                     <hr />
                     <p>{body} </p>
-                    <p><button className="btn btn-primary" onClick={e => this.handleEditClick(e)}>Update</button>
-                    <button className="btn btn-danger " onClick={e => this.handleEditClick(e)}>Delete</button></p>
+                    <p><button className="btn btn-primary btn-sm mystyle" onClick={e => this.handleEditClick(e)}>Update</button>
+                    
+                    <button className="btn btn-danger btn-sm mystyle " onClick={e => this.handleEditClick(e)}>Delete</button></p>
 
                 </div>
             </div>
