@@ -10,9 +10,6 @@ class StoryBox extends Component {
             stories: [
                 { id: 1, author: 'James', body: 'This is Story 1' },
                 { id: 2, author: 'Divya', body: 'This is Story 2' }
-            ],
-            books: [
-                { bookId: 10, bookName: 'Java Script', price: 9474 }
             ]
         }
     }

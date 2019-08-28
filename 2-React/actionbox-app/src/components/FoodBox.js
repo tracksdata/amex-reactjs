@@ -6,7 +6,7 @@ class FoodBox extends Component {
     renderChildren(){
         let {children}=this.props;
         return children.map((child,idx)=>{
-            return <li key={idx} className="list-group-items" >{child}</li>
+            return <li key={idx} className="list-group-item" >{child}</li>
         })
     }
 
